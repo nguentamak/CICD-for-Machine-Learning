@@ -1,2 +1,5 @@
 black>=23.0
 flake8
+pandas
+scikit-learn
+skops
