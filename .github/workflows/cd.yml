@@ -17,6 +17,7 @@ jobs:
         run: pip install huggingface-hub
         
       - name: Deployment To Hugging Face
+        run: make deploy
         env:
-          REPO_NAME: ${{ github.repository_owner }}/mon-modele
+          REPO_NAME: ${{ github.repository_owner }}/Model
           HF: ${{ secrets.HF_TOKEN }}
