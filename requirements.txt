@@ -3,3 +3,4 @@ flake8
 pandas
 scikit-learn
 skops
+matplotlib
