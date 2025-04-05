@@ -34,4 +34,5 @@ push-hub:
 		huggingface-cli upload SergeNgue/Drug-Classification ./Results /Metrics --repo-type=space --commit-message="Sync Model"
 
 deploy:
-		hf-login push-hub
+		huggingface-cli login --token $(HF)
+		huggingface-cli upload $(REPO_NAME) ./Model --repo-type=model
