@@ -11,14 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
       - uses: iterative/setup-cml@v2
+      
       - name: Install Packages
         run: make install
+        
       - name: Format
         run: make format
+        
       - name: Train
         run: make train
+        
       - name: Evaluation
-      - env:
+        env:
             REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: make eval
